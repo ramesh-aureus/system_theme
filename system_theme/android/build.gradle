@@ -26,7 +26,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 31
-
+    namespace 'com.bruno.system_theme'
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
