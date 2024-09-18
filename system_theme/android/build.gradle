@@ -27,8 +27,15 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 31
     namespace 'com.bruno.system_theme'
+     compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+    }
+    kotlinOptions {
+        jvmTarget = '17'  // Ensure Kotlin targets Java 17
     }
     defaultConfig {
         minSdkVersion 16
@@ -36,5 +43,5 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
